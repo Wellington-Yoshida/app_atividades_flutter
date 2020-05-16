@@ -1,7 +1,11 @@
+import 'package:app_atividade/service/http/service_usuario.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'user_list.dart';
+
 class Home extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,10 +35,15 @@ class Home extends StatelessWidget {
                   textColor: Colors.white,
                   color: Colors.blue,
                   child: Text(
-                    'Lista de Atividades',
+                    'Lista de Usuários',
                     style: TextStyle(fontSize: 20),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserList()),
+                    );
+                  },
                 ),
               ),
             ),
